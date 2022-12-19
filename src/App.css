@@ -1,38 +1,40 @@
-.App {
-  text-align: center;
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	font-family: Dana !important;
+	direction: rtl;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+textarea:focus, input:focus, button:focus{
+  outline: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+@font-face {
+font-family: dana;
+font-style: normal;
+font-weight: 500;
+src: url('../public/assets/fonts/woff2/DanaFaNum-Medium.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+   url('../public/assets/fonts/woff/DanaFaNum-Medium.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+@font-face {
+font-family: dana;
+font-style: normal;
+font-weight: 800;
+src: url('../public/assets/fonts/woff2/DanaFaNum-ExtraBold.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+   url('../public/assets/fonts/woff/DanaFaNum-ExtraBold.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
 }
-
-.App-link {
-  color: #61dafb;
+@font-face {
+font-family: dana;
+font-style: normal;
+font-weight: bold;
+src: url('../public/assets/fonts/woff2/DanaFaNum-Bold.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+   url('../public/assets/fonts/woff/DanaFaNum-Bold.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+@font-face {
+font-family: dana;
+font-style: normal;
+font-weight: normal;
+src: url('../public/assets/fonts/woff2/DanaFaNum-Regular.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
+   url('../public/assets/fonts/woff/DanaFaNum-Regular.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
 }
