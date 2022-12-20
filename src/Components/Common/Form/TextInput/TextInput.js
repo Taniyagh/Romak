@@ -1,10 +1,24 @@
 import React from "react";
-import './TextInput.scss';
+import "./TextInput.scss";
 
-function TextInput({placeholder}) {
+function TextInput({
+  placeholder,
+  value,
+  handleChange,
+  notValidUsernameMessage,
+}) {
   return (
     <>
-      <input type="text" className="input-component" placeholder={placeholder} />
+      <div className="text-input-component-holder">
+        <input
+          type="text"
+          className="input-component"
+          placeholder={placeholder}
+          value={value}
+          onChange={handleChange}
+        />
+        <p className="error-message-text-input">{notValidUsernameMessage}</p>
+      </div>
     </>
   );
 }

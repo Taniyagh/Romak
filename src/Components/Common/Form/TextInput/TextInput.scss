@@ -1,8 +1,23 @@
-.input-component{
-    height: 35px;
-    padding-right: 10px;
-    &::placeholder{
-        margin-right: 20px;
-        font-size: 14px;
+
+.text-input-component-holder{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    .input-component{
+        height: 40px;
+        padding-right: 37px;
+        width: 250px;
+        &::placeholder{
+            margin-right: 20px;
+            font-size: 14px;
+        }
+    }
+    .error-message-text-input{
+        color:rgb(200, 14, 14);
+        font-size: 10px;
+        font-weight: normal;
+        margin-top: 5px;
+        display: flex;
+        justify-content: flex-start;
     }
 }
