@@ -1,6 +1,6 @@
-.button-component{
+.button-component {
     background-color: rgb(3, 169, 234);
-    color:white;
+    color: white;
     width: 250px;
     height: 40px;
     display: flex;
@@ -8,4 +8,16 @@
     align-items: center;
     border: none;
     outline: none;
+
+    span {
+        // width: 100%;
+        // height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .loading-component{
+            height: 20px !important;
+            width: 20px !important;
+        }
+    }
 }

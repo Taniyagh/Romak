@@ -11,7 +11,7 @@ async function AxiosGet(url,obj) {
 
     catch (error) { 
         console.log('error',error)    
-        return error.response.data;
+        return error;
     }
   
 }

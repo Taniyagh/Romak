@@ -3,16 +3,12 @@ import { Route, Routes } from "react-router-dom";
 import { routes } from "./utils/routes";
 import { Suspense } from "react";
 import ProtectedRoute from "./ProtectedRoute";
-import Login from "./Pages/Login/Login";
-import { URL_Route } from "./setup";
+
 
 function App() {
-  console.log("hi");
+
   return (
     <>
-      {/* <Routes>
-        <Route path="/" element={<Login/>} />
-      </Routes> */}
       <Suspense>
           <Routes>
             {

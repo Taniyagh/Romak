@@ -23,7 +23,7 @@ export const routes=[
         component:ProductswithPagination
     },
     {
-        path:URL_Route.ProductswithAG,
+        path:URL_Route.ProductswithAGs,
         protected:true,
         component:ProductswithAG
     }
