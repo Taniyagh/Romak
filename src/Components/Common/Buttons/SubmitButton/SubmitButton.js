@@ -1,14 +1,21 @@
-import React from 'react';
-import './SubmitButton.scss';
-import ReactLoading  from 'react-loading';
+import React from "react";
+import "./SubmitButton.scss";
+import ReactLoading from "react-loading";
 
-function SubmitButton({handleSubmit, name, isLoading}) {
+function SubmitButton({ handleSubmit, name, isLoading }) {
   return (
-      <span onClick={handleSubmit} className='button-component'>
-        {isLoading  ? <ReactLoading type='spin' color='white' className='loading-component' style={{height: '20px', width: '20px', color:'white'}}/> : name}
-      </span>
-
-  )
+    <span onClick={handleSubmit} className="button-component">
+      {isLoading ? (
+        <ReactLoading
+          type="spin"
+          color="white"
+          style={{ height: "20px", width: "20px", color: "white" }}
+        />
+      ) : (
+        name
+      )}
+    </span>
+  );
 }
 
-export default SubmitButton
+export default SubmitButton;

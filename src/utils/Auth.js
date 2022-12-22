@@ -1,14 +1,14 @@
+//Setting token to local storage
 export function login(token) {
-    localStorage.setItem("token", JSON.stringify(token));
+  localStorage.setItem("token", JSON.stringify(token));
 }
 
-//it will remove token from storage
+//Removing token from storage
 export function logout() {
   localStorage.removeItem("token");
 }
 
-
-//get token from storage
+//Getting token from storage
 export function getToken() {
   return JSON.parse(localStorage.getItem("token"));
 }

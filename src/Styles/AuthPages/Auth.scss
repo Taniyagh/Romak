@@ -4,44 +4,51 @@
     align-items: center;
     background-color: rgba(0, 0, 0, 0.05);
     height: 100vh;
+
     .login-component-container {
         box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.2);
         width: 400px;
         height: auto;
         background-color: white;
-        padding:40px 0px 30px 0px;
-        .login-component-logo-frame{
+        padding: 40px 0px 30px 0px;
+
+        .login-component-logo-frame {
             width: 100%;
             display: flex;
             justify-content: center;
             margin-top: 20px;
-            .login-component-logo{
+
+            .login-component-logo {
                 width: 20%;
             }
         }
-        h3{
+
+        h3 {
             margin-top: 20px;
             width: 100%;
             text-align: center;
         }
-        h4{
+
+        h4 {
             margin-top: 10px;
             margin-bottom: 50px;
             width: 100%;
             text-align: center;
         }
-        .login-component-input-holder{
+
+        .login-component-input-holder {
             width: 100%;
             display: flex;
             justify-content: center;
             margin-bottom: 10px;
         }
-        .login-component-button-holder{
+
+        .login-component-button-holder {
             width: 100%;
             display: flex;
             justify-content: center;
-            margin-top: 70px; 
+            margin-top: 70px;
         }
-        
+
     }
 }

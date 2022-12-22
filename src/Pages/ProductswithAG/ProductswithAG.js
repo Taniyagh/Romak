@@ -1,52 +1,30 @@
-import React, {
-  useState,
-  useEffect,
-} from "react";
+//Hooks
+import React, { useEffect, useMemo, useState } from "react";
+
+//Components and functions
+import { AgGridReact } from "ag-grid-react";
+
+//Style
+import "./ProductswithAg.scss";
+
+//APIs
 import AxiosGet from "../../API/AxiosGet";
 import { Axios_Route } from "../../API/AxiosRoutes";
-import "ag-grid-community/styles/ag-grid.css"; // Core grid CSS, always needed
-import "ag-grid-community/styles/ag-theme-alpine.css"; // Optional theme CSS
-import "../../Styles/ProductTables/ProductTables.scss";
-import { AgGridReact } from "ag-grid-react";
-import { useContainerWidth } from "./useContainerWidth";
-import { useWindowSize } from "./useWindowSize";
 
-const ProductswithAGGGG = ({
-  onGridReady,
-  theme = "ag-theme-alpine",
-  debounce = 0,
-  ...props
-}) => {
-  const [rowData, setRowData] = useState(); // Set rowData to Array of Objects, one Object per Row
-
-  // Each Column Definition results in one Column.
+function ProductswithAG() {
+  const [rowData, setRowData] = useState([]);
   const [columnDefs, setColumnDefs] = useState([
-    { field: "id", filter: true, floatingFilter: true, width: 320 },
-    { field: "title", filter: true, floatingFilter: true, width: 350 },
-    { field: "price", filter: true, floatingFilter: true, width: 350 },
+    { field: "id", width: 300, filter: true, floatingFilter: true },
+    { field: "title", width: 350, filter: true, floatingFilter: true },
+    { field: "price", width: 350, filter: true, floatingFilter: true },
   ]);
 
-  const [gridApi, setGridApi] = useState();
-  const [windowWidth] = useWindowSize(debounce);
-  const { width: containerWidth, ref } = useContainerWidth(debounce);
+  const defaultColDef = useMemo(() => ({
+    sortable: true,
+  }));
+
   useEffect(() => {
-    GetProducts();
-    if (gridApi) {
-      gridApi.sizeColumnsToFit();
-    }
-  }, [windowWidth, containerWidth, gridApi]);
-
-  function handleGridReady(event) {
-    if (onGridReady) {
-      onGridReady(event);
-    }
-    setGridApi(event.api);
-  }
-  // Example load data from sever
-
-  const GetProducts = () => {
     AxiosGet(Axios_Route.getProducts).then((data) => {
-      console.log(data);
       const rowProductData = data.products.map((product) => {
         return {
           id: product.id,
@@ -54,28 +32,25 @@ const ProductswithAGGGG = ({
           price: product.price,
         };
       });
-      console.log(rowProductData);
       setRowData(rowProductData);
-      console.log(rowData);
     });
-  };
+  }, []);
 
   return (
-    <div className="table-component-holder">
-      {/* On div wrapping Grid a) specify theme CSS Class Class and b) sets Grid size */}
+    <div className="grid-wrapper">
       <div
-        className={theme}
-        ref={ref}
-        style={{ height: "100%", width: "100%" }}
+        className="ag-theme-alpine"
+        style={{ height: "1400px", width: "1000px" }}
       >
         <AgGridReact
-          onGridReady={handleGridReady}
           rowData={rowData}
           columnDefs={columnDefs}
-        />
+          defaultColDef={defaultColDef}
+          animateRows={true}
+        ></AgGridReact>
       </div>
     </div>
   );
-};
+}
 
-export default ProductswithAGGGG;
+export default ProductswithAG;

@@ -1,40 +1,53 @@
-*{
-	margin: 0;
-	padding: 0;
-	box-sizing: border-box;
-	font-family: Dana !important;
-	direction: rtl;
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   font-family: Dana !important;
+   direction: rtl;
 }
 
-textarea:focus, input:focus, button:focus{
-  outline: none;
+textarea:focus,
+input:focus,
+button:focus {
+   outline: none;
 }
 
 @font-face {
-font-family: dana;
-font-style: normal;
-font-weight: 500;
-src: url('../public/assets/fonts/woff2/DanaFaNum-Medium.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
-   url('../public/assets/fonts/woff/DanaFaNum-Medium.woff') format('woff'),  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+   font-family: dana;
+   font-style: normal;
+   font-weight: 500;
+   src: url('../public/assets/fonts/woff2/DanaFaNum-Medium.woff2') format('woff2'),
+      /* FF39+,Chrome36+, Opera24+*/
+      url('../public/assets/fonts/woff/DanaFaNum-Medium.woff') format('woff'),
+      /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
 }
+
 @font-face {
-font-family: dana;
-font-style: normal;
-font-weight: 800;
-src: url('../public/assets/fonts/woff2/DanaFaNum-ExtraBold.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
-   url('../public/assets/fonts/woff/DanaFaNum-ExtraBold.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+   font-family: dana;
+   font-style: normal;
+   font-weight: 800;
+   src: url('../public/assets/fonts/woff2/DanaFaNum-ExtraBold.woff2') format('woff2'),
+      /* FF39+,Chrome36+, Opera24+*/
+      url('../public/assets/fonts/woff/DanaFaNum-ExtraBold.woff') format('woff');
+   /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
 }
+
 @font-face {
-font-family: dana;
-font-style: normal;
-font-weight: bold;
-src: url('../public/assets/fonts/woff2/DanaFaNum-Bold.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
-   url('../public/assets/fonts/woff/DanaFaNum-Bold.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+   font-family: dana;
+   font-style: normal;
+   font-weight: bold;
+   src: url('../public/assets/fonts/woff2/DanaFaNum-Bold.woff2') format('woff2'),
+      /* FF39+,Chrome36+, Opera24+*/
+      url('../public/assets/fonts/woff/DanaFaNum-Bold.woff') format('woff');
+   /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
 }
+
 @font-face {
-font-family: dana;
-font-style: normal;
-font-weight: normal;
-src: url('../public/assets/fonts/woff2/DanaFaNum-Regular.woff2') format('woff2'),  /* FF39+,Chrome36+, Opera24+*/
-   url('../public/assets/fonts/woff/DanaFaNum-Regular.woff') format('woff');  /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
+   font-family: dana;
+   font-style: normal;
+   font-weight: normal;
+   src: url('../public/assets/fonts/woff2/DanaFaNum-Regular.woff2') format('woff2'),
+      /* FF39+,Chrome36+, Opera24+*/
+      url('../public/assets/fonts/woff/DanaFaNum-Regular.woff') format('woff');
+   /* FF3.6+, IE9, Chrome6+, Saf5.1+*/
 }

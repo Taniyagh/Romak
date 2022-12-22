@@ -8,7 +8,7 @@ async function AxiosPost(url,obj) {
     }
 
     catch (error) {
-          return error.response.data;
+          return error;
       }
   
 }

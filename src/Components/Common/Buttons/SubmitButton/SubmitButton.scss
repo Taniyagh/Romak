@@ -10,14 +10,8 @@
     outline: none;
 
     span {
-        // width: 100%;
-        // height: 100%;
         display: flex;
         justify-content: center;
         align-items: center;
-        .loading-component{
-            height: 20px !important;
-            width: 20px !important;
-        }
     }
 }
